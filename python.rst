@@ -1992,7 +1992,7 @@ Python 3.6 (PEP 530) gives us *asynchronous comprehensions*. You can add ``async
 
   >>> async def process(aiter):
   ...     result = []
-  ...     for num in aiter:
+  ...     async for num in aiter:
   ...         if num % 2 == 0:  # filter
   ...             result.append(num*num)  # map
 
