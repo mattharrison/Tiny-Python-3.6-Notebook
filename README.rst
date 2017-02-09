@@ -2,7 +2,7 @@
  Tiny Python 3.6 Notebook
 ==========================
 
-This respository contains the text for the *Tiny Python 3.6 Notebook*.
+This repository contains the text for the *Tiny Python 3.6 Notebook*.
 
 .. figure::   img/tinypy36-iso.png
    :width: 50 %
