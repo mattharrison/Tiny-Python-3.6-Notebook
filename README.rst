@@ -4,9 +4,8 @@
 
 This respository contains the text for the *Tiny Python 3.6 Notebook*.
 
-.. img::
-
-  img/tinypy36-iso.png
+.. figure::   img/tinypy36-iso.png
+   :width: 50 %
 
 Warning, this is not an introduction to Python. Rather it is a notebook
 containing curated examples for Python 3 as well as the new features found in
@@ -21,9 +20,8 @@ hand laid out version that fits in the pocket and has blank pages in the back
 for note taking. It is available at Amazon. I'm indebted to those who
 support my work and write reviews. Thanks!
 
-.. img::
-
-  img/book.jpg
+.. figure:: img/book.jpg
+  :width: 50 %
 
 Feel free to share this repository on social media.
 
