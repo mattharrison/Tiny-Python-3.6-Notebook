@@ -182,13 +182,13 @@ the standard library.
   ====================== ================== =====================================
   ``abs(num)``           ``__abs__``        Absolute value of ``num``
   ``num + num2``         ``__add__``        Addition
-  ``bool(num)``          ``__bool__``       Boolean coercion
+  ``bool(num)``          ``__bool__``       Boolean conversion
   ``num == num2``        ``__eq__``         Equality
-  ``float(num)``         ``__float__``      Float coercion
+  ``float(num)``         ``__float__``      Float conversion
   ``num // num2``        ``__floordiv__``   Integer division
   ``num >= num2``        ``__ge__``         Greater or equal
   ``num > num2``         ``__gt__``         Greater than
-  ``int(num)``           ``__int__``        Integer coercion
+  ``int(num)``           ``__int__``        Integer conversion
   ``num <= num2``        ``__le__``         Less or equal
   ``num < num2``         ``__lt__``         Less than
   ``num % num2``         ``__mod__``        Modulus
@@ -199,7 +199,7 @@ the standard library.
   ``num ** num2``        ``__pow__``        Power
   ``round(num)``         ``__round__``      Round
   ``num.__sizeof__()``   ``__sizeof__``     Bytes for internal representation
-  ``str(num)``           ``__str__``        String coercion
+  ``str(num)``           ``__str__``        String conversion
   ``num - num2``         ``__sub__``        Subtraction
   ``num / num2``         ``__truediv__``    Float division
   ``math.trunc(num)``    ``__trunc__``      Truncation
@@ -758,7 +758,7 @@ In the default namespace you have access to various callables:
   ``exec(source, globals=None, locals=None)``                       Run ``source`` (statement string or result of ``compile``) with globals and locals
   ``exit(code)``                                                    Exit Python interpreter and return code
   ``filter([function], seq)``                                       Return iterator of items where ``function(item)`` is truthy (or ``item`` is truthy if ``function`` is missing)
-  ``float(x)``                                                      Coerce string or number to float (call ``x.__float__()``)
+  ``float(x)``                                                      Convert string or number to float (call ``x.__float__()``)
   ``format(obj, fmt)``                                              Format protocol (call ``obj.__format__(fmt)``)
   ``frozenset([seq])``                                              Create ``frozenset`` from ``seq`` (empty if missing)
   ``getattr(obj, attr)``                                            Get attribute from ``obj`` (``obj.attr``)
@@ -1126,7 +1126,7 @@ and parameters of the function::
 
 We can create anonymous functions using the ``lambda`` statement. Because they
 only allow an expression following the colon, it is somewhat crippled in functionality.
-The are common as a ``key`` argument to ``sorted``, ``min``, or ``max``::
+They are commonly used as a ``key`` argument to ``sorted``, ``min``, or ``max``::
 
   >>> add = lambda x, y: x + y
   >>> add(4, 5)
