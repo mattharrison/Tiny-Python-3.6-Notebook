@@ -123,9 +123,17 @@ reuse variable names for different object types (though you probably shouldn't):
    The ``#`` character denotes the start of a comment. There are no multi-line comments, though
    most editors with Python support can comment out a region.
 
+The figure that follows illustrates how everything is an object in Python and variables just point to them.
+
+
 .. figure:: img/py/rebind.png
 
    Illustration of reusing the same variable 
+
+.. raw:: latex
+
+   %\Needspace{5\baselineskip}
+   \clearpage
 
 Numbers
 -----------
@@ -133,20 +141,29 @@ Numbers
 Python includes three types of numeric literals:
 *integers*, *floats*, and *complex numbers*.
 Python 3.6 adds the ability to use underscores to
-improve readability (PEP 515)
+improve readability (PEP 515).
 
-================ ===========================
-Type             Example
-================ ===========================
-Integer          ``14``
-Integer (Hex)    ``0xe``
-Integer (Octal)  ``0o16``
-Integer (Binary) ``0b1110``
-Float            ``14.0``
-Float            ``1.4e1``
-Complex          ``14+0j``
-Underscore       ``1_000``
-================ ===========================
+.. raw:: latex
+
+   \Needspace{5\baselineskip}
+
+..  longtable: format: {r l}
+
+.. table:: Number types
+
+  
+  ================ ===========================
+  Type             Example
+  ================ ===========================
+  Integer          ``14``
+  Integer (Hex)    ``0xe``
+  Integer (Octal)  ``0o16``
+  Integer (Binary) ``0b1110``
+  Float            ``14.0``
+  Float            ``1.4e1``
+  Complex          ``14+0j``
+  Underscore       ``1_000``
+  ================ ===========================
 
 There are many built-in functions for manipulating
 numbers ie. ``abs``, ``min``, ``max``, ``ceil``.
@@ -225,15 +242,24 @@ Strings
 
 Python 3 strings hold unicode data. Python has a few ways to represent strings. There is also a bytes type (PEP 3137):
 
-================ ===========================
-Type             Example
-================ ===========================
-String           ``"hello\tthere"``
-String           ``'hello'``
-String           ``'''He said, "hello"'''``
-Raw string       ``r'hello\tthere'``
-Byte string      ``b'hello'``
-================ ===========================
+.. raw:: latex
+
+   \Needspace{10\baselineskip}
+
+
+..  longtable: format: {r l}
+
+.. table:: String types
+  
+  ================ ===========================
+  Type             Example
+  ================ ===========================
+  String           ``"hello\tthere"``
+  String           ``'hello'``
+  String           ``'''He said, "hello"'''``
+  Raw string       ``r'hello\tthere'``
+  Byte string      ``b'hello'``
+  ================ ===========================
 
 
 ..  longtable: format: {p{.3\textwidth} l >{\raggedright\arraybackslash}p{.3\textwidth}}
@@ -326,7 +352,6 @@ Byte string      ``b'hello'``
   ======================================================= ===========================================================
 
 
-
 Lists
 -----
 
@@ -371,6 +396,10 @@ We can also do *slicing* operations on most sequences::
   ['Ringo', 'George', 'John', 'Paul']
 
  
+.. raw:: latex
+
+   \Needspace{5\baselineskip}
+
 
 ..  longtable: format: {p{.25\textwidth} l >{\raggedright\arraybackslash}p{.35\textwidth}}
 
@@ -617,6 +646,8 @@ Sets are useful because they provide *set operations*, such as union
 
     >>> empty = set()
 
+
+
 ..  longtable: format: {p{.25\textwidth} l >{\raggedright\arraybackslash}p{.35\textwidth}}
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.25\textwidth} l >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.35\textwidth}}
@@ -653,6 +684,11 @@ Sets are useful because they provide *set operations*, such as union
   ``s - s2``                              ``__sub__``               Set difference (see ``.difference``)
   ``s ^ s2``                              ``__xor__``               Set xor (see ``.symmetric_difference``)
   ======================================= ========================= ============================================================
+
+.. raw:: latex
+
+   %\Needspace{5\baselineskip}
+   \clearpage
 
 
 
@@ -981,19 +1017,24 @@ handle. There are various modes to open a file, depending on the content and
 your needs. If you open the file in binary mode, you will get bytes out. In text
 mode you will get strings back:
 
-================= ======================================================================
-Mode              Meaning
-================= ======================================================================
-``'r'``           Read text file (default)
-``'w'``           Write text file (truncates if exists)
-``'x'``           Write text file, throw ``FileExistsError`` if exists.
-``'a'``           Append to text file (write to end)
-``'rb'``          Read binary file
-``'wb'``          Write binary (truncate)
-``'w+b'``         Open binary file for reading and writing
-``'xb'``          Write binary file, throw ``FileExistsError`` if exists.
-``'ab'``          Append to binary file (write to end)
-================= ======================================================================
+..  longtable: format: {r l}
+
+.. table:: File Modes
+
+  
+  ================= ======================================================================
+  Mode              Meaning
+  ================= ======================================================================
+  ``'r'``           Read text file (default)
+  ``'w'``           Write text file (truncates if exists)
+  ``'x'``           Write text file, throw ``FileExistsError`` if exists.
+  ``'a'``           Append to text file (write to end)
+  ``'rb'``          Read binary file
+  ``'wb'``          Write binary (truncate)
+  ``'w+b'``         Open binary file for reading and writing
+  ``'xb'``          Write binary file, throw ``FileExistsError`` if exists.
+  ``'ab'``          Append to binary file (write to end)
+  ================= ======================================================================
 
 Writing Files
 --------------
@@ -1629,8 +1670,7 @@ We can decorate a function with it like this::
   ... def add(x, y):
   ...     return x + y
 
-A more useful decorator can inject logic before and after calling the original function. To do this we create a function inside of the function and return that.
-Below, we use print functions to illustrate before/after behavior, otherwise this is very similar to identity decorator::
+A more useful decorator can inject logic before and after calling the original function. To do this we create a function inside of the function and return that::
 
   >>> import functools
   >>> def verbose(func):
@@ -1642,6 +1682,8 @@ Below, we use print functions to illustrate before/after behavior, otherwise thi
   ...         print("Result:{}".format(res))
   ...         return res
   ...     return inner
+
+Above, we use print functions to illustrate before/after behavior, otherwise this is very similar to identity decorator.
 
 There is a special syntax for applying the decorator. We put ``@`` before the decorator name and place that on a line directly above the function we wish to decorate. Using the ``@verbose`` line before a function declaration is syntactic sugar for re-assigning the variable pointing to the function to the result of calling
 the decorator with the function passed into it::
@@ -1664,7 +1706,15 @@ Parameterized Decorators
 Because we can use closures to create functions, we can use closures to create decorators as well.
 This is very similar to our decorator above, but now we make a function that will
 return a decorator. Based on the inputs to that function, we can control (or parameterize)
-the behavior of the decorator::
+the behavior of the decorator:
+
+.. raw:: latex
+
+   %\Needspace{5\baselineskip}
+   \clearpage
+
+
+::
 
   >>> def verbose_level(level):
   ...     def verbose(func):
@@ -1769,7 +1819,7 @@ Metaclasses with Classes
 
 You can define a class decorator and use either ``__new__`` or
 ``__init__``. Typically most use ``__new__`` as it can alter
-attributes like ``__slots__``
+attributes like ``__slots__``.
 
 ::
 
@@ -1838,11 +1888,18 @@ The ``asyncio`` library (PEP 3153) provides asynchronous I/O in Python 3. We use
   >>> co  # Not running
   <coroutine object greeting at 0x1087dcba0>
 
-
   >>> loop = asyncio.get_event_loop()
   >>> loop.run_until_complete(co)
   Here they are!
   >>> loop.close()
+
+
+.. raw:: latex
+
+
+   \clearpage
+
+
 
 To return an object, use an ``asyncio.Future``::
 
@@ -2144,7 +2201,7 @@ Note that Python does not do type checking, you need to use something like mypy:
   >>> add("foo", "bar")
   'foobar'
 
-You can also specify the types of variables::
+You can also specify the types of variables with a comment::
 
   >>> from typing import Dict
   >>> ages = {}  # type: Dict[str, int]
@@ -2237,3 +2294,47 @@ You can also rename imports using ``as``::
   from packagename.module1 import fib as package_fib
 
   package_fib()
+
+Environments
+================
+
+Python 3 includes the ``venv`` module for creating a sandbox for your project or a *virtual environment*.
+
+To create an environment on Unix systems, run::
+
+  $ python3 -m venv /path/to/env
+
+On Windows, run::
+
+  c:\>c:\Python36\python -m venv c:\path\to\env
+
+To enter or *activate* the environment on Unix, run::
+
+  $ source /path/to/env/bin/activate
+
+On Windows, run::
+
+  c:\>c:\path\to\env\Scripts\activate.bat
+
+Your prompt should have the name of the active virtual environment in parentheses.
+To *deactivate* an environment on both platforms, just run the following::
+
+  (env) $ deactivate
+
+Installing Packages
+-------------------
+
+You should now have a ``pip`` executable, that will install a package from PyPI [#]_  into your virtual environment::
+
+  (env) $ pip install django
+
+.. [#] https://pypi.python.org/pypi
+
+To uninstall a package run::
+
+  (env) $ pip uninstall django
+
+If you are having issues installing a package, you might want to look into alternative Python distributions such as Anaconda [#]_ that have prepackaged many harder to install packages.
+
+.. [#] https://docs.continuum.io/anaconda/
+

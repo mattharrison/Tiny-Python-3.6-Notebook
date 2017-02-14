@@ -15,9 +15,9 @@ the author or aid those who want a quick refresher to the Python syntax.
 Thanks
 -------
 
-If you enjoy this content, consider purchasing the physical version. It is a
+If you enjoy this content, consider `purchasing the physical version<https://www.amazon.com/dp/1542883253/ref=as_li_ss_il?ie=UTF8&qid=1487086306&sr=8-7&keywords=python+3.6&linkCode=li2&tag=hairysuncom-20&linkId=5bed517e28e53633e149006968a55f67>`_. It is a
 hand laid out version that fits in the pocket and has blank pages in the back
-for note taking. It is available at Amazon. I'm indebted to those who
+for note taking. It is available at `Amazon<https://www.amazon.com/dp/1542883253/ref=as_li_ss_il?ie=UTF8&qid=1487086306&sr=8-7&keywords=python+3.6&linkCode=li2&tag=hairysuncom-20&linkId=5bed517e28e53633e149006968a55f67>`_. I'm indebted to those who
 support my work and write reviews. Thanks!
 
 .. figure:: img/book.jpg
