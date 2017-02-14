@@ -3,7 +3,7 @@ Tiny Python 3.6 Notebook
 
 This repository contains the text for the *Tiny Python 3.6 Notebook*.
 
-![](img/tinypy36-iso.png){width="50%"}
+<img src="img/tinypy36-iso.png" width="50%">
 
 Warning, this is not an introduction to Python. Rather it is a notebook
 containing curated examples for Python 3 as well as the new features
