@@ -523,7 +523,7 @@ must be hashable, but values can be any object::
   ``d.pop(key, [default])``                                         Return value for key or default (``KeyError`` if not set)
   ``d.popitem()``                                                   Return arbitrary (key, value) tuple. ``KeyError`` if empty
   ``d.setdefault(k,   [default])``                                  Does ``d.get(k, default)``. If ``k`` missing, sets to default
-  ``d.update(dict_or_seq)``                                         Mutate ``d`` with values of ``dict_or_seq`` (dictionary or iterable of (key, value) pairs)
+  ``d.update(d2)``                                                  Mutate ``d`` with values of ``d2`` (dictionary or iterable of (key, value) pairs)
   ``d.values()``                                                    View of values
   ================================================================= ============================================================
 
