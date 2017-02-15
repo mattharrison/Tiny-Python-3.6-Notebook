@@ -61,13 +61,13 @@ REPL
 
 .. note::
 
-  The majority of code in this book is written as if it where executed in a REPL. If you
+  The majority of code in this book is written as if it were executed in a REPL. If you
   are typing it in, ignore the primary and secondary prompts (``>>>`` and ``...``).
 
 The Zen of Python
 ===================
 
-Run the following in an interpreter to get an easter egg that describes some of the ethos behind Python. This is also codified in PEP 20::
+Run the following in an interpreter to get an Easter egg that describes some of the ethos behind Python. This is also codified in PEP 20::
 
     >>> import this
     The Zen of Python, by Tim Peters
@@ -1282,7 +1282,7 @@ but Python passes that around for us automatically::
   >>> print(bike.gear_inches())
   68.0
 
-We can access both class attributes or instance attributes on the instance::
+We can access both class attributes and instance attributes on the instance::
 
   >>> bike.num_passengers
   1
