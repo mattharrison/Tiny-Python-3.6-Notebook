@@ -2074,10 +2074,10 @@ If we were writing a Python module to write TeX, we might do something like this
 the environments are closed properly::
 
   >>> def start(env):
-  ...     return '\begin{}'.format(env)
+  ...     return '\\begin{{{}}}'.format(env)
 
   >>> def end(env):
-  ...      return '\end{}'.format(env)
+  ...      return '\\end{{{}}}'.format(env)
 
   >>> def may_error():
   ...     import random
@@ -2102,18 +2102,18 @@ Function Based Context Managers
 -------------------------------
 
 To create a context manager with a function, decorate with
-``contextlib.contextmanager``, and yield where you want to bookend::
+``contextlib.contextmanager``, and yield where you want to insert your block::
 
   >>> import contextlib
   >>> @contextlib.contextmanager
   ... def env(name, content):
-  ...     content.append(r'\begin{}'.format(name))
+  ...     content.append('\\begin{{{}}}'.format(name))
   ...     try:
   ...         yield
   ...     except ValueError:
   ...         pass
   ...     finally:
-  ...         content.append(r'\end{}'.format(name))
+  ...         content.append('\\end{{{}}}'.format(name))
 
 Our code looks better now, and there will always be a closing tag::
 
@@ -2122,7 +2122,7 @@ Our code looks better now, and there will always be a closing tag::
   ...     out.append(may_error())
 
   >>> out
-  ['\\begincenter', 'content', '\\endcenter']
+  ['\\begin{center}', 'content', '\\end{center}']
 
 Class Based Context Managers
 ----------------------------
@@ -2135,14 +2135,14 @@ To create a class based context manager, implement the ``__enter__`` and ``__exi
   ...         self.content = content
   ...
   ...     def __enter__(self):
-  ...         self.content.append(r'\begin{}'.format(
+  ...         self.content.append('\\begin{{{}}}'.format(
   ...             self.name))
   ...
   ...     def __exit__(self, type, value, tb):
   ...         # if error in block, t, v, & tb
   ...         # have non None values
   ...         # return True to hide exception
-  ...         self.content.append(r'\end{}'.format(
+  ...         self.content.append('\\end{{{}}}'.format(
   ...             self.name))
   ...         return True
 
@@ -2153,7 +2153,7 @@ The code looks the same as using the function based context manager::
   ...     out.append(may_error())
 
   >>> out  # may_error had an issue
-  ['\\begincenter', '\\endcenter']
+  ['\\begin{center}', '\\end{center}']
 
 
 Context objects
