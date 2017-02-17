@@ -665,7 +665,7 @@ Sets are useful because they provide *set operations*, such as union
   ``s >= s2``                             ``__ge__``                ``s`` in ``s2`` (see ``.issuperset``)
   ``s > s2``                              ``__gt__``                Greater. Always ``False```
   No hash                                 ``__hash__``              Set to ``None`` to ensure you can't insert in dictionary
-  ``s &= s2``                             ``__iand__``              Augmented (mutates ``s``) intersection (see ``.intersection_udpate``)
+  ``s &= s2``                             ``__iand__``              Augmented (mutates ``s``) intersection (see ``.intersection_update``)
   ``s |= s2``                             ``__ior__``               Augmented (mutates ``s``) union (see ``.update``)
   ``s -= s2``                             ``__isub__``              Augmented (mutates ``s``) difference (see ``.difference_update``)
   ``for thing in s:``                     ``__iter__``              Iteration
