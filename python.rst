@@ -695,7 +695,7 @@ Sets are useful because they provide *set operations*, such as union
 
 ..  longtable: format: {p{.55\textwidth} p{.35\textwidth}}
 
-..  longtable: format: {>{\hangindent=1em\hangafter=1\arraybackslash }p{.55\textwidth}  >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.35\textwidth}}
+..  longtable: format: {>{\hangindent=1em\hangafter=1\arraybackslash }p{.6\textwidth}  >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.30\textwidth}}
 
 .. table:: Set Methods
   
@@ -1274,6 +1274,7 @@ can use the built-in data structures to great effect. Here's a class for a simpl
   ...
   ...     def gear_inches(self):
   ...         return self.ratio * self.size
+
 
 
 We can call the constructor (``__init__``), by invoking the class name. Note that ``self`` is the instance,
