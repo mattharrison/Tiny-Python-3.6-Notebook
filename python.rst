@@ -2280,7 +2280,7 @@ You can import a package or a module::
 
 Assume there is a ``fib`` function in ``module1``. You have access to everything in the namespace of the module you imported::
 
-  from packagename.module1
+  import packagename.module1
 
   packagename.module1.fib()
 
