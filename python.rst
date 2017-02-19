@@ -309,13 +309,13 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   ``s.capitalize()``                                      Capitalizes a string
   ``s.casefold()``                                        Lowercase in a unicode compliant manner
   ``s.center(w, [char])``                                 Center a string in ``w`` spaces with ``char`` (default ``" "``)
-  ``s.count(sub, [start, [end]])``                        Count ``sub`` in ``s`` between start and end
+  ``s.count(sub, [start, [end]])``                        Count ``sub`` in ``s`` between ``start`` and ``end``
   ``s.encode(encoding, errors= 'strict')``                Encode a string into bytes
   ``s.endswith(sub)``                                     Check for a suffix
   ``s.expandtabs( tabsize=8)``                            Replaces tabs with spaces
   ``s.find(sub, [start, [end]])``                         Find substring or return ``-1``
   ``s.format(*args, **kw)``                               Format string
-  ``s.format_map( mapping)``                               Format strings with a mapping
+  ``s.format_map( mapping)``                              Format strings with a mapping
   ``s.index(sub, [start, [end]])``                        Find substring or raise ``ValueError``
   ``s.isalnum()``                                         Boolean if alphanumeric
   ``s.isalpha()``                                         Boolean if alphabetic
@@ -329,7 +329,7 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   ``s.istitle()``                                         Boolean if titlecased
   ``s.isupper()``                                         Boolean if uppercased
   ``s.join(iterable)``                                    Return a string inserted between sequence
-  ``s.ljust(w, [char])``                                  Left justify in w spaces with ``char`` (default ``' '``)
+  ``s.ljust(w, [char])``                                  Left justify in ``w`` spaces with ``char`` (default ``' '``)
   ``s.lower()``                                           Lowercase
   ``s.lstrip([chars])``                                   Left strip ``chars`` (default spacing).
   ``s.partition(sub)``                                    Split string at first occurrence of substring, return ``(before, sub, after)``
@@ -338,11 +338,11 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   ``s.rindex(sub, [start, [end]])``                       Find rightmost substring or raise ``ValueError``
   ``s.rjust(w, [char)``                                   Right justify in w spaces with char (default ``" "``)
   ``s.rpartition(sub)``                                   Rightmost partition
-  ``s.rsplit([sep, [maxsplit=-1])``                       Rightmost split by sep (defaults to whitespace)
+  ``s.rsplit([sep, [maxsplit=-1])``                       Rightmost split by ``sep`` (defaults to whitespace)
   ``s.rstrip([chars])``                                   Right strip
   ``s.split([sep, [maxsplit=-1]])``                       Split a string into sequence around substring
-  ``s.splitlines( keepends=False)``                        Break string at line boundaries
-  ``s.startswith( prefix, [start, [end]])``                Check for prefix
+  ``s.splitlines(keepends=False)``                        Break string at line boundaries
+  ``s.startswith(prefix, [start, [end]])``                Check for prefix
   ``s.strip([chars])``                                    Remove leading and trailing whitespace (default) or ``chars``
   ``s.swapcase()``                                        Swap casing of string
   ``s.title()``                                           Titlecase string
