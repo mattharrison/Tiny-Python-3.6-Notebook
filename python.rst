@@ -841,7 +841,7 @@ the ``\N`` syntax. The following are equivalent::
    we convert to UTF-8. There are other byte encodings for this string. If we have a UTF-8
    byte string, we can *decode* it into a Unicode string. Note that we should be explicit
    about the decoding as there are potentially other encodings that we could decode to
-   that might give use erroneous data, or *mojibake*.
+   that might give the user erroneous data, or *mojibake*.
 
 String Formatting
 =================
