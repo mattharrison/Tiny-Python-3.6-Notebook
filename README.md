@@ -11,6 +11,16 @@ found in Python 3.6. It is designed to accompany technical corporate
 training offered by the author or aid those who want a quick refresher
 to the Python syntax.
 
+Reviews
+---------
+
+> I think it's pretty awesome. It's all of the syntax boiled down to just the facts man. - Brian Okken (Host of Test & Code podcast)
+
+
+> It's the perfect follow on to a training course. - Michael Kennedy (Host of Talk Python podcast)
+
+
+
 Thanks
 ------
 
