@@ -386,9 +386,9 @@ We can also do *slicing* operations on most sequences::
 
   >>> people[1:2]
   ['John']
-  >>> people[:1]   # Implcit start at 0
+  >>> people[:1]   # Implicit start at 0
   ['Paul']
-  >>> people[1:]   # Implcit end at len(people)
+  >>> people[1:]   # Implicit end at len(people)
   ['John', 'George', 'Ringo']
   >>> people[::2]  # Take every other item
   ['Paul', 'George']
