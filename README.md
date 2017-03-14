@@ -19,7 +19,12 @@ Reviews
 
 > It's the perfect follow on to a training course. - Michael Kennedy (Host of Talk Python podcast)
 
+Bulk Purchase
+---------------
 
+If you are interested in purchasing larger amounts (100+) for schools, employees or for
+use as giveaways/swag at a conference (much better than a tshirt!), get in touch 
+with Matt (matt at metasnake dot com).
 
 Thanks
 ------
