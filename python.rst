@@ -1552,6 +1552,7 @@ and an optional ``else`` statement at the end. In Python, the word ``elif`` is D
 
 Python supports the following tests: ``>``, ``>=``, ``<``, ``<=``, ``==``, and ``!=``. For boolean operators use ``and``, ``or``, and ``not`` (``&``, ``|``, and ``^`` are the bitwise operators).
 
+
 Note that Python also supports *range comparisons*::
 
   >>> x = 4
@@ -1605,6 +1606,31 @@ The following table lists *truthy* and *falsey* values:
 | ``'0'``           |                                 |
 +-------------------+---------------------------------+
 
+Short Circuiting
+----------------
+
+The ``and`` statement will short circuit if it evaluates to false::
+
+  >>> 0 and 1/0
+  0
+
+Likewise, the ``or`` statement will short circuit when something evaluates to true::
+
+  >>> 1 or 1/0
+  1
+
+Ternary Operator
+------------------
+
+Python has its own ternary operator, called a *conditional expression* (see PEP 308). These are handy as they can be used in comprehension constructs and ``lambda`` functions::
+
+  >>> last = 'Lennon' if band == 'Beatles' else 'Jones'
+
+Note that this has similar behavior to an ``if`` statement, but it is an expression, and not a statement. Python
+distinguishes these two. An easy way to determine between the two, is to remember that an expression follows a ``return`` statement. Anything you can ``return`` is an expression.
+
+
+  
 
 
 Exceptions
@@ -2278,14 +2304,14 @@ You can import a package or a module::
   import packagename
   import packagename.module1
 
-Assume there is a ``fib`` function in ``module1``. You have access to everything in the namespace of the module you imported::
+Assume there is a ``fib`` function in ``module1``. You have access to everything in the namespace of the module you imported. To use this function you will need to use the fully qualified name, ``packagename.module1.fib``::
 
   import packagename.module1
 
   packagename.module1.fib()
 
-To use this you will need to use the fully qualified name, ``packagename.module1.fib``.
-If you only want to import the ``fib`` use the ``from`` variant::
+
+If you only want to import the ``fib`` function, use the ``from`` variant::
 
   from packagename.module1 import fib
 
