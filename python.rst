@@ -277,7 +277,7 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   ``\t``              Tab
   ``\u12af``          Unicode 16 bit
   ``\U12af89bc``      Unicode 32 bit
-  ``N{BLACK STAR}``   Unicode name
+  ``\N{BLACK STAR}``  Unicode name
   ``\o84``            Octal character
   ``\xFF``            Hex character
   =================== =================
