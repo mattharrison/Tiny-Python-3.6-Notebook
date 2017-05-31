@@ -261,6 +261,28 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   Byte string      ``b'hello'``
   ================ ===========================
 
+.. table:: Escape Characters
+
+  =================== =================
+  Escape Sequence     Output
+  =================== =================
+  ``\`` newline       Ignore trailing newline in triple quoted string
+  ``\\``              Backslash
+  ``\'``              Single quote
+  ``\"``              Double quote
+  ``\a``              ASCII Bell
+  ``\b``              ASCII Backspace
+  ``\n``              Newline
+  ``\r``              ASCII carriage return
+  ``\t``              Tab
+  ``\u12af``          Unicode 16 bit
+  ``\U12af89bc``      Unicode 32 bit
+  ``N{BLACK STAR}``   Unicode name
+  ``\o84``            Octal character
+  ``\xFF``            Hex character
+  =================== =================
+  
+
 
 ..  longtable: format: {p{.3\textwidth} l >{\raggedright\arraybackslash}p{.3\textwidth}}
 
@@ -579,17 +601,17 @@ We can access members by position or name (name allows us to be more explicit)::
   ``"{}".format(t)``                 ``__format__``            String format of tuple
   ``t >= t2``                        ``__ge__``                Greater or equal. Compares items in tuple from left
   ``t[idx]``                         ``__getitem__``           Index operation
-  ``t > l2``                         ``__gt__``                Greater. Compares items in tuple from left
+  ``t > t2``                         ``__gt__``                Greater. Compares items in tuple from left
   ``hash(t)``                        ``__hash__``              For set/dict insertion
   ``for thing in t:``                ``__iter__``              Iteration
   ``t <= t2``                        ``__le__``                Less than or equal. Compares items in tuple from left
-  ``len(l)``                         ``__len__``               Length
+  ``len(t)``                         ``__len__``               Length
   ``t < t2``                         ``__lt__``                Less than. Compares items in tuple from left
   ``t * 2``                          ``__mul__``               Repetition
-  ``t != l2``                        ``__ne__``                Not equal
+  ``t != t2``                        ``__ne__``                Not equal
   ``repr(t)``                        ``__repr__``              Programmer friendly string
   ``foo * t``                        ``__rmul__``              Called if ``foo`` doesn't implement ``__mul__``
-  ``l.__sizeof__()``                 ``__sizeof__``            Bytes for internal representation
+  ``t.__sizeof__()``                 ``__sizeof__``            Bytes for internal representation
   ``str(l)``                         ``__str__``               User friendly string
   ================================== ========================= ============================================================
 
@@ -1183,7 +1205,7 @@ Functions can support variable keyword arguments::
   but 1 was given
 
 
-You can indicate the end of positional parameters by using a single ``*``. This gives you keyword only parameters (PEP 3102)::
+You can indicate the end of positional parameters by using a single ``*``. This gives you *keyword only* parameters (PEP 3102)::
 
   >>> def add_points(*, x1=0, y1=0, x2=0, y2=0):
   ...     return x1 + x2, y1 + y2
@@ -1242,6 +1264,9 @@ You can also combine ``*`` and ``**`` on invocation::
 
   >>> add_all(*sizes, **named_sizes)
   10.5
+
+Getting Help
+------------
 
 You can get help on a function that has a docstring by using ``help``::
 
