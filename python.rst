@@ -779,7 +779,7 @@ In the default namespace you have access to various callables:
   ``enumerate(seq, [start])``                                       Return iterator of index, item tuple pairs. Index begins at ``start`` or ``0`` (default)
   ``eval(source, globals=None, locals=None)``                       Run ``source`` (expression string or result of ``compile``) with globals and locals
   ``exec(source, globals=None, locals=None)``                       Run ``source`` (statement string or result of ``compile``) with globals and locals
-  ``exit(code)``                                                    Exit Python interpreter and return code
+  ``exit([code])``                                                    Exit Python interpreter and return code (default 0)
   ``filter([function], seq)``                                       Return iterator of items where ``function(item)`` is truthy (or ``item`` is truthy if ``function`` is missing)
   ``float(x)``                                                      Convert string or number to float (call ``x.__float__()``)
   ``format(obj, fmt)``                                              Format protocol (call ``obj.__format__(fmt)``)
