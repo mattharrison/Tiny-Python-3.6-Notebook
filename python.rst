@@ -685,7 +685,7 @@ Sets are useful because they provide *set operations*, such as union
   ``s == s2``                             ``__eq__``                Equality. Sets are equal or not equal
   ``"{}".format(s)``                      ``__format__``            String format of set
   ``s >= s2``                             ``__ge__``                ``s`` in ``s2`` (see ``.issuperset``)
-  ``s > s2``                              ``__gt__``                Greater. Always ``False```
+  ``s > s2``                              ``__gt__``                Strict superset (``s >= s2`` but ``s != s2``).
   No hash                                 ``__hash__``              Set to ``None`` to ensure you can't insert in dictionary
   ``s &= s2``                             ``__iand__``              Augmented (mutates ``s``) intersection (see ``.intersection_update``)
   ``s |= s2``                             ``__ior__``               Augmented (mutates ``s``) union (see ``.update``)
@@ -694,7 +694,7 @@ Sets are useful because they provide *set operations*, such as union
   ``s ^= s2``                             ``__ixor__``              Augmented (mutates ``s``) xor (see ``.symmetric_difference_update``)
   ``s <= s2``                             ``__le__``                ``s2`` in ``s`` (see ``.issubset``)
   ``len(s)``                              ``__len__``               Length 
-  ``s < s2``                              ``__lt__``                Less than. Always ``False``
+  ``s < s2``                              ``__lt__``                Strict subset (``s <= s2`` but ``s != s2``).
   ``s != s2``                             ``__ne__``                Not equal
   ``s | s2``                              ``__or__``                Set union (see ``.union``)
   ``foo & s``                             ``__rand__``              Called if ``foo`` doesn't implement ``__and__``
