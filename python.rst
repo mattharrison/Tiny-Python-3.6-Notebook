@@ -57,7 +57,7 @@ REPL
 
 * Use the ``help`` function to read the documentation for a module/class/function. As a standalone invocation,
   you enter the help system and can explore various topics.
-* Use the ``dir`` function to list contents of the namespace, or attributes of an object if you pass one in
+* Use the ``dir`` function to list contents of the namespace, or attributes of an object if you pass one in.
 
 .. note::
 
