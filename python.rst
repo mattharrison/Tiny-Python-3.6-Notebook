@@ -590,7 +590,7 @@ We can access members by position or name (name allows us to be more explicit)::
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.3\textwidth} l >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.3\textwidth}}
 
-.. table:: Tuple Methods
+.. table:: Tuple Operations
   
   ================================== ========================= ============================================================
   Operation                          Provided                  Result
@@ -675,7 +675,7 @@ Sets are useful because they provide *set operations*, such as union
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.25\textwidth} l >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.35\textwidth}}
 
-.. table:: Set Methods
+.. table:: Set Operations
   
   ======================================= ========================= ============================================================
   Operation                               Provided By               Result
