@@ -732,9 +732,9 @@ Sets are useful because they provide *set operations*, such as union
   ``s.discard(item)``                                               Remove ``item`` from s (mutates ``s``). No error on missing ``item``
   ``s.intersection(s2)``                                            Return set with elements from both sets
   ``s.intersection_update(s2)``                                     Update ``s`` with members of ``s2`` (mutates ``s``)
-  ``s.isdisjoint(s2)``                                              ``True`` is there is no intersection
-  ``s.issubset(s2)``                                                All elements of ``s`` in ``s2``
-  ``s.issuperset(s2)``                                              All elements of ``s2`` in ``s2``
+  ``s.isdisjoint(s2)``                                              ``True`` if there is no intersection of these two sets
+  ``s.issubset(s2)``                                                ``True`` if all elements of ``s`` are in ``s2``
+  ``s.issuperset(s2)``                                              ``True`` if all elements of ``s2`` are in ``s``
   ``s.pop()``                                                       Remove arbitrary item from s (mutates ``s``). ``KeyError`` on missing ``item``
   ``s.remove(item)``                                                Remove ``item`` from s (mutates ``s``). ``KeyError`` on missing ``item``
   ``s.symmetric_difference(s2)``                                    Return set with elements only in one of the sets
