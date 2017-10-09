@@ -29,7 +29,11 @@ Reviews
 
 > Cool work: a tiny and handy notebook containing notes, tables and examples for Python 3.6. Very much recommended! - @epaillas
 
+> I keep a copy on my desk.  Excellent resource - @HLIBIndustry
 
+> Awesome community work! - @MostafaElzoghbi
+
+> Интересный формат книги по #python - @ku_al
 
 Bulk Purchase
 ---------------
