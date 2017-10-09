@@ -19,9 +19,9 @@ Reviews
 
 > It's the perfect follow on to a training course. - Michael Kennedy (Host of Talk Python podcast)
 
-> Great Python reference book by @__mharrison__ "Tiny Python 3.6 Notebook" It's NOT a @ProjectJupyter notebook - @okeedoak
+> Great Python reference book by @\_\_mharrison\_\_ "Tiny Python 3.6 Notebook" It's NOT a @ProjectJupyter notebook - @okeedoak
 
-> Goodness! So thankful for @__mharrison__ and his Tiny Python 3.6 Notebook. Great resource! Go get it…  - @__jamesssio__
+> Goodness! So thankful for @\_\_mharrison\_\_ and his Tiny Python 3.6 Notebook. Great resource! Go get it…  - @\_\_jamesssio\_\_
 
 > Tiny #Python notebook for looking up all the basics. I found this a very concise read if you have some prev prog exp - @andreasose
 
