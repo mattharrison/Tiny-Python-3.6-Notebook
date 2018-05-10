@@ -14,6 +14,8 @@ to the Python syntax.
 Reviews
 ---------
 
+> This is an awesome python3 resource I share all the time. 🐍🎉 - @nnja (MS Developer Advocate)
+
 > I think it's pretty awesome. It's all of the syntax boiled down to just the facts man. - Brian Okken (Host of Test & Code podcast)
 
 
