@@ -261,7 +261,7 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   Byte string      ``b'hello'``
   ================ ===========================
 
-.. table:: Escape Characters
+.. table:: Escape Characters (unicode escapes must be in unicode string)
 
   =================== =================
   Escape Sequence     Output
@@ -275,7 +275,7 @@ Python 3 strings hold unicode data. Python has a few ways to represent strings. 
   ``\n``              Newline
   ``\r``              ASCII carriage return
   ``\t``              Tab
-  ``\u12af``          Unicode 16 bit
+  ``\u12af``          Unicode 16 bit 
   ``\U12af89bc``      Unicode 32 bit
   ``\N{BLACK STAR}``  Unicode name
   ``\o84``            Octal character
