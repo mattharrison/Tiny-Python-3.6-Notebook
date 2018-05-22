@@ -14,10 +14,28 @@ to the Python syntax.
 Reviews
 ---------
 
+> This is an awesome python3 resource I share all the time. 🐍🎉 - @nnja (MS Developer Advocate)
+
 > I think it's pretty awesome. It's all of the syntax boiled down to just the facts man. - Brian Okken (Host of Test & Code podcast)
 
 
 > It's the perfect follow on to a training course. - Michael Kennedy (Host of Talk Python podcast)
+
+> Great Python reference book by @\_\_mharrison\_\_ "Tiny Python 3.6 Notebook" It's NOT a @ProjectJupyter notebook - @okeedoak
+
+> Goodness! So thankful for @\_\_mharrison\_\_ and his Tiny Python 3.6 Notebook. Great resource! Go get it…  - @\_\_jamesssio\_\_
+
+> Tiny #Python notebook for looking up all the basics. I found this a very concise read if you have some prev prog exp - @andreasose
+
+> Useful collection of notes on Python 3.6 - @hjelmj
+
+> Cool work: a tiny and handy notebook containing notes, tables and examples for Python 3.6. Very much recommended! - @epaillas
+
+> I keep a copy on my desk.  Excellent resource - @HLIBIndustry
+
+> Awesome community work! - @MostafaElzoghbi
+
+> Интересный формат книги по #python - @ku_al
 
 Bulk Purchase
 ---------------

@@ -57,7 +57,7 @@ REPL
 
 * Use the ``help`` function to read the documentation for a module/class/function. As a standalone invocation,
   you enter the help system and can explore various topics.
-* Use the ``dir`` function to list contents of the namespace, or attributes of an object if you pass one in
+* Use the ``dir`` function to list contents of the namespace, or attributes of an object if you pass one in.
 
 .. note::
 
@@ -590,7 +590,7 @@ We can access members by position or name (name allows us to be more explicit)::
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.3\textwidth} l >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.3\textwidth}}
 
-.. table:: Tuple Methods
+.. table:: Tuple Operations
   
   ================================== ========================= ============================================================
   Operation                          Provided                  Result
@@ -675,7 +675,7 @@ Sets are useful because they provide *set operations*, such as union
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.25\textwidth} l >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.35\textwidth}}
 
-.. table:: Set Methods
+.. table:: Set Operations
   
   ======================================= ========================= ============================================================
   Operation                               Provided By               Result
@@ -685,7 +685,7 @@ Sets are useful because they provide *set operations*, such as union
   ``s == s2``                             ``__eq__``                Equality. Sets are equal or not equal
   ``"{}".format(s)``                      ``__format__``            String format of set
   ``s >= s2``                             ``__ge__``                ``s`` in ``s2`` (see ``.issuperset``)
-  ``s > s2``                              ``__gt__``                Greater. Always ``False```
+  ``s > s2``                              ``__gt__``                Strict superset (``s >= s2`` but ``s != s2``).
   No hash                                 ``__hash__``              Set to ``None`` to ensure you can't insert in dictionary
   ``s &= s2``                             ``__iand__``              Augmented (mutates ``s``) intersection (see ``.intersection_update``)
   ``s |= s2``                             ``__ior__``               Augmented (mutates ``s``) union (see ``.update``)
@@ -694,7 +694,7 @@ Sets are useful because they provide *set operations*, such as union
   ``s ^= s2``                             ``__ixor__``              Augmented (mutates ``s``) xor (see ``.symmetric_difference_update``)
   ``s <= s2``                             ``__le__``                ``s2`` in ``s`` (see ``.issubset``)
   ``len(s)``                              ``__len__``               Length 
-  ``s < s2``                              ``__lt__``                Less than. Always ``False``
+  ``s < s2``                              ``__lt__``                Strict subset (``s <= s2`` but ``s != s2``).
   ``s != s2``                             ``__ne__``                Not equal
   ``s | s2``                              ``__or__``                Set union (see ``.union``)
   ``foo & s``                             ``__rand__``              Called if ``foo`` doesn't implement ``__and__``
@@ -732,9 +732,9 @@ Sets are useful because they provide *set operations*, such as union
   ``s.discard(item)``                                               Remove ``item`` from s (mutates ``s``). No error on missing ``item``
   ``s.intersection(s2)``                                            Return set with elements from both sets
   ``s.intersection_update(s2)``                                     Update ``s`` with members of ``s2`` (mutates ``s``)
-  ``s.isdisjoint(s2)``                                              ``True`` is there is no intersection
-  ``s.issubset(s2)``                                                All elements of ``s`` in ``s2``
-  ``s.issuperset(s2)``                                              All elements of ``s2`` in ``s2``
+  ``s.isdisjoint(s2)``                                              ``True`` if there is no intersection of these two sets
+  ``s.issubset(s2)``                                                ``True`` if all elements of ``s`` are in ``s2``
+  ``s.issuperset(s2)``                                              ``True`` if all elements of ``s2`` are in ``s``
   ``s.pop()``                                                       Remove arbitrary item from s (mutates ``s``). ``KeyError`` on missing ``item``
   ``s.remove(item)``                                                Remove ``item`` from s (mutates ``s``). ``KeyError`` on missing ``item``
   ``s.symmetric_difference(s2)``                                    Return set with elements only in one of the sets
@@ -779,7 +779,7 @@ In the default namespace you have access to various callables:
   ``enumerate(seq, [start])``                                       Return iterator of index, item tuple pairs. Index begins at ``start`` or ``0`` (default)
   ``eval(source, globals=None, locals=None)``                       Run ``source`` (expression string or result of ``compile``) with globals and locals
   ``exec(source, globals=None, locals=None)``                       Run ``source`` (statement string or result of ``compile``) with globals and locals
-  ``exit(code)``                                                    Exit Python interpreter and return code
+  ``exit([code])``                                                    Exit Python interpreter and return code (default 0)
   ``filter([function], seq)``                                       Return iterator of items where ``function(item)`` is truthy (or ``item`` is truthy if ``function`` is missing)
   ``float(x)``                                                      Convert string or number to float (call ``x.__float__()``)
   ``format(obj, fmt)``                                              Format protocol (call ``obj.__format__(fmt)``)
