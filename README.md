@@ -1,3 +1,10 @@
+Note!
+======
+
+This repo is outdated: You probably want 
+
+https://github.com/mattharrison/Tiny-Python-3.8-Notebook
+
 Tiny Python 3.6 Notebook
 ========================
 
